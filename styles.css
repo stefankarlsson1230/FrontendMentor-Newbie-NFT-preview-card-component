@@ -1,18 +1,31 @@
-/* 
-Colors
-Primary
-  Soft blue: hsl(215, 51%, 70%)
-  Cyan: hsl(178, 100%, 50%)
+/*
 
-Neutral
-  Very dark blue (line): hsl(215, 32%, 27%)
-  White: hsl(0, 0%, 100%)
+## Layout
 
-Typography
+The designs were created to the following widths:
 
-Font
-  Family: Outfit              font-family: 'Outfit', sans-serif;
-  Weights: 300, 400, 600
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+
 */
 
 body {
@@ -29,6 +42,7 @@ body {
   height: 596px;
   background-color: hsl(216, 50%, 16%);
   border-radius: 15px;
+  padding-bottom: 16px;
 }
 
 /* The large image */
@@ -38,19 +52,80 @@ body {
   border-radius: 8px;
 }
 
-/* Text */
+/* The rest of the card */
+#cardContent {
+  margin: 24px;
+  margin-top: 0;
+}
+
 h1 {
   font-size: 22px;
   font-weight: 600;
   color: hsl(0, 0%, 100%);
+  margin-top: 0;
 }
 
 p {
   font-size: 18px;
   font-weight: 300;
-  color: hsl(215, 51%, 70%)
+  color: hsl(215, 51%, 70%);
 }
 
+#icons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+#icons p, #footer p {
+  font-size: 16px;
+}
+
+#smallCrystal, #clock {
+  padding-right: 8px;
+}
+
+#icons span {
+  color: hwb(178 0% 0%);
+  font-weight: 600;
+}
+
+#clock {
+  position: relative;
+  top: 2px;
+}
+
+#footer {
+  padding-top: 8px;
+}
+
+#photo {
+  width: 33px;
+  border-radius: 50%;
+  border: 1px solid white;
+  float: left;
+  margin-right: 18px;
+  position: relative;
+  bottom: 5px;
+}
+
+#name {
+  color: white;
+}
+
+
+/* Active states */
+
+#name:active, h1:active {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+#crystal:active {
+  cursor: pointer;
+
+}
 
 
 /* Mobile */
